@@ -90,9 +90,9 @@
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p>The <code>qipalette</code> package provides a collection of color
-palettes for data visualization in R. This vignette demonstrates how to
-use the package functions and apply the palettes to your
-visualizations.</p>
+palettes for data visualization in R, inspired by the branding colors of
+the Quadram Institute Bioscience. This vignette demonstrates how to use
+the package functions and apply the palettes to your visualizations.</p>
 </div>
 <div class="section level2">
 <h2 id="available-palettes">Available Palettes<a class="anchor" aria-label="anchor" href="#available-palettes"></a>
@@ -112,9 +112,9 @@ visualizations.</p>
 <code><a href="../reference/get_palette.html">get_palette()</a></code> function:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Get the default number of colors</span></span>
-<span><span class="va">sunset_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_palette.html">get_palette</a></span><span class="op">(</span><span class="st">"sunset"</span><span class="op">)</span></span>
+<span><span class="va">sunset_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_palette.html">get_palette</a></span><span class="op">(</span><span class="st">"qicolors"</span><span class="op">)</span></span>
 <span><span class="va">sunset_colors</span></span>
-<span><span class="co">#&gt; [1] "#FFE4B5" "#FFD700" "#FF8C00" "#FF4500" "#8B0000"</span></span>
+<span><span class="co">#&gt; [1] "#009681" "#B5BD00" "#333F48" "#CF4520" "#48A23F" "#FF9E1B" "#00778B"</span></span>
 <span></span>
 <span><span class="co"># Get a specific number of colors</span></span>
 <span><span class="va">sunset_colors_8</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_palette.html">get_palette</a></span><span class="op">(</span><span class="st">"sunset"</span>, n <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
@@ -201,16 +201,6 @@ coloring based on categories:</p>
 <span>       col <span class="op">=</span> <span class="fu"><a href="../reference/get_palette.html">get_palette</a></span><span class="op">(</span><span class="st">"forest"</span>, <span class="fl">3</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">19</span><span class="op">)</span></span></code></pre></div>
 <p><img src="introduction_files/figure-html/unnamed-chunk-7-1.png" width="672"></p>
 </div>
-</div>
-<div class="section level2">
-<h2 id="conclusion">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
-</h2>
-<p>The <code>qipalette</code> package provides easy-to-use color
-palettes that enhance the visual appeal of your plots. With functions
-for both base R and ggplot2 integration, it fits seamlessly into your
-existing visualization workflow.</p>
-<p>Experiment with different palettes and options to find the best
-visual representation for your data!</p>
 </div>
   </div>
 
