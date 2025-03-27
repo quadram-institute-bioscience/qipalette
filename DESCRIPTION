@@ -1,0 +1,28 @@
+Package: qipalette
+Title: Quadram Institute Bioscience Color Palettes for Data Visualization
+Version: 0.1.0
+Authors@R: 
+    person(given = "Andrea",
+           family = "Telatin",
+           role = c("aut", "cre"),
+           email = "andrea.telatin@quadram.ac.uk")
+Description: A collection of color palettes for data visualization in R.
+    This package provides functions to easily access, display, and use these
+    palettes with various plotting systems including base R graphics and ggplot2.
+    The palettes are designed to be visually appealing and accessible.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    ggplot2
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Imports: 
+    grDevices,
+    graphics
+URL: https://github.com/quadram-institute-bioscience/qipalette
+BugReports: https://github.com/quadram-institute-bioscience/qipalette/issues

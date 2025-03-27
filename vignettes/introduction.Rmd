@@ -1,0 +1,123 @@
+---
+title: "Introduction to qipalette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to qipalette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+```
+
+```{r setup}
+library(qipalette)
+```
+
+## Overview
+
+The `qipalette` package provides a collection of color palettes for data visualization in R. This vignette demonstrates how to use the package functions and apply the palettes to your visualizations.
+
+## Available Palettes
+
+Let's start by displaying all available palettes:
+
+```{r}
+display_all_palettes()
+```
+
+## Basic Usage
+
+### Getting Colors from a Palette
+
+You can extract colors from a palette using the `get_palette()` function:
+
+```{r}
+# Get the default number of colors
+sunset_colors <- get_palette("sunset")
+sunset_colors
+
+# Get a specific number of colors
+sunset_colors_8 <- get_palette("sunset", n = 8)
+sunset_colors_8
+
+# Reverse the palette
+sunset_colors_rev <- get_palette("sunset", reverse = TRUE)
+sunset_colors_rev
+```
+
+### Using with Base R Graphics
+
+The palettes can be easily used with base R graphics:
+
+```{r}
+# Scatter plot with colors by group
+plot(1:5, 1:5, col = get_palette("ocean", 5), pch = 19, cex = 3,
+     main = "Ocean Palette Demo", xlab = "X", ylab = "Y")
+
+# Bar plot
+barplot(1:5, col = get_palette("forest"), main = "Forest Palette Demo")
+
+# Pie chart
+pie(rep(1, 5), col = get_palette("sunset"), main = "Sunset Palette Demo")
+```
+
+## Integration with ggplot2
+
+The package includes functions for easy integration with ggplot2:
+
+```{r, eval=requireNamespace("ggplot2", quietly = TRUE)}
+library(ggplot2)
+
+# Scatter plot with discrete color scale
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
+  geom_point(size = 3) +
+  scale_color_palette("sunset") +
+  labs(title = "Car Weight vs MPG", color = "Cylinders")
+
+# Bar plot with fill scale
+ggplot(data.frame(x = letters[1:5], y = 1:5), aes(x, y, fill = x)) +
+  geom_col() +
+  scale_fill_palette("ocean") +
+  labs(title = "Sample Bar Chart", fill = "Category")
+```
+
+## Advanced Usage
+
+### Continuous Color Scales
+
+For continuous variables, you can set `discrete = FALSE`:
+
+```{r, eval=requireNamespace("ggplot2", quietly = TRUE)}
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_tile() +
+  scale_fill_palette("sunset", discrete = FALSE) +
+  labs(title = "Old Faithful Eruption Density")
+```
+
+### Custom Plotting Function
+
+You can use the `palette_color()` function for flexible coloring based on categories:
+
+```{r}
+# Create a factor variable
+groups <- factor(rep(letters[1:3], each = 5))
+
+# Plot with palette_color
+plot(1:15, rnorm(15), col = palette_color("forest")(groups), pch = 19, cex = 2,
+     main = "Groups colored by forest palette")
+legend("topright", legend = levels(groups),
+       col = get_palette("forest", 3), pch = 19)
+```
+
+## Conclusion
+
+The `qipalette` package provides easy-to-use color palettes that enhance the visual appeal of your plots. With functions for both base R and ggplot2 integration, it fits seamlessly into your existing visualization workflow.
+
+Experiment with different palettes and options to find the best visual representation for your data!
