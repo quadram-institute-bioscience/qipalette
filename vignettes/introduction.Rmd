@@ -22,7 +22,9 @@ library(qipalette)
 
 ## Overview
 
-The `qipalette` package provides a collection of color palettes for data visualization in R. This vignette demonstrates how to use the package functions and apply the palettes to your visualizations.
+The `qipalette` package provides a collection of color palettes for data visualization in R,
+inspired by the branding colors of the Quadram Institute Bioscience.
+This vignette demonstrates how to use the package functions and apply the palettes to your visualizations.
 
 ## Available Palettes
 
@@ -40,7 +42,7 @@ You can extract colors from a palette using the `get_palette()` function:
 
 ```{r}
 # Get the default number of colors
-sunset_colors <- get_palette("sunset")
+sunset_colors <- get_palette("qicolors")
 sunset_colors
 
 # Get a specific number of colors
@@ -115,9 +117,4 @@ plot(1:15, rnorm(15), col = palette_color("forest")(groups), pch = 19, cex = 2,
 legend("topright", legend = levels(groups),
        col = get_palette("forest", 3), pch = 19)
 ```
-
-## Conclusion
-
-The `qipalette` package provides easy-to-use color palettes that enhance the visual appeal of your plots. With functions for both base R and ggplot2 integration, it fits seamlessly into your existing visualization workflow.
-
-Experiment with different palettes and options to find the best visual representation for your data!
+ 

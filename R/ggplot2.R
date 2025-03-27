@@ -21,14 +21,19 @@ scale_color_palette <- function(palette = "sunset", discrete = TRUE, reverse = F
   pal <- get_palette(palette, reverse = reverse)
 
   if (discrete) {
-    ggplot2::discrete_scale("colour", paste0("palette_", palette),
-                            palette = function(n) {
-                              get_palette(palette, n, reverse)
-                            }, ...)
+    ggplot2::discrete_scale(
+      aesthetics = "colour",
+      scale_name = paste0("palette_", palette),
+      palette = function(n) {
+        get_palette(palette, n, reverse)
+      },
+      ...
+    )
   } else {
     ggplot2::scale_color_gradientn(colours = pal, ...)
   }
 }
+
 
 #' Scale fill for ggplot2
 #'
@@ -53,10 +58,14 @@ scale_fill_palette <- function(palette = "sunset", discrete = TRUE, reverse = FA
   pal <- get_palette(palette, reverse = reverse)
 
   if (discrete) {
-    ggplot2::discrete_scale("fill", paste0("palette_", palette),
-                            palette = function(n) {
-                              get_palette(palette, n, reverse)
-                            }, ...)
+    ggplot2::discrete_scale(
+      aesthetics = "fill",
+      scale_name = paste0("palette_", palette),
+      palette = function(n) {
+        get_palette(palette, n, reverse)
+      },
+      ...
+    )
   } else {
     ggplot2::scale_fill_gradientn(colours = pal, ...)
   }
