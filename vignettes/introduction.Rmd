@@ -58,7 +58,7 @@ The palettes can be easily used with base R graphics:
 
 ```{r}
 # Scatter plot with colors by group
-plot(1:5, 1:5, col = get_palette("ocean", 5), pch = 19, cex = 3,
+plot(1:5, 1:5, col = get_palette("qicolors", 5), pch = 19, cex = 3,
      main = "Ocean Palette Demo", xlab = "X", ylab = "Y")
 
 # Bar plot
@@ -84,7 +84,7 @@ ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
 # Bar plot with fill scale
 ggplot(data.frame(x = letters[1:5], y = 1:5), aes(x, y, fill = x)) +
   geom_col() +
-  scale_fill_palette("ocean") +
+  scale_fill_palette("qicolors") +
   labs(title = "Sample Bar Chart", fill = "Category")
 ```
 

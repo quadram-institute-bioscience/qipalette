@@ -26,6 +26,6 @@ A fill scale for ggplot2 based on the package palettes
 library(ggplot2)
 ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
   geom_bar() +
-  scale_fill_palette("ocean", guide = "none")
+  scale_fill_palette("qicolors", guide = "none")
 }
 }

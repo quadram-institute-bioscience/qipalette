@@ -38,7 +38,7 @@ test_that("get_palette returns expected output", {
 test_that("display functions don't error", {
   # These tests just check that the functions run without error
   expect_invisible(display_palette("sunset"))
-  expect_invisible(display_palette("ocean", 7))
+  expect_invisible(display_palette("qicolors", 7))
   expect_invisible(display_all_palettes())
 })
 

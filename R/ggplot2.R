@@ -47,7 +47,7 @@ scale_color_palette <- function(palette = "sunset", discrete = TRUE, reverse = F
 #' library(ggplot2)
 #' ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 #'   geom_bar() +
-#'   scale_fill_palette("ocean", guide = "none")
+#'   scale_fill_palette("qicolors", guide = "none")
 #' }
 scale_fill_palette <- function(palette = "sunset", discrete = TRUE, reverse = FALSE, ...) {
   pal <- get_palette(palette, reverse = reverse)

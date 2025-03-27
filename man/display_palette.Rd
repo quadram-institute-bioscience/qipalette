@@ -19,5 +19,5 @@ Creates a simple plot displaying the colors in a palette
 }
 \examples{
 display_palette("sunset")
-display_palette("ocean", 10)
+display_palette("qicolors", 10)
 }

@@ -20,9 +20,10 @@ NULL
 #' @export
 palettes <- list(
   # Define your color palettes here
-  sunset = c("#FFE4B5", "#FFD700", "#FF8C00", "#FF4500", "#8B0000"),
-  ocean = c("#F0F8FF", "#87CEEB", "#1E90FF", "#0000CD", "#191970"),
-  forest = c("#ADFF2F", "#32CD32", "#228B22", "#006400", "#2F4F4F")
+  qicolors = c("#009681", "#B5BD00", "#333F48", "#CF4520", "#48A23F", "#FF9E1B", "#00778B"),
+  sunset   = c("#FFE4B5", "#FFD700", "#FF8C00", "#FF4500", "#8B0000"),
+  blues    = c("#F0F8FF", "#87CEEB", "#1E90FF", "#0000CD", "#191970"),
+  forest   = c("#ADFF2F", "#32CD32", "#228B22", "#006400", "#2F4F4F")
 )
 
 #' Get a color palette
@@ -39,7 +40,7 @@ palettes <- list(
 #'
 #' @examples
 #' get_palette("sunset", 3)
-#' get_palette("ocean", 10)
+#' get_palette("qicolors", 10)
 #' get_palette("forest", 5, reverse = TRUE)
 get_palette <- function(name, n = NULL, reverse = FALSE) {
   pal <- palettes[[name]]
@@ -73,7 +74,7 @@ get_palette <- function(name, n = NULL, reverse = FALSE) {
 #'
 #' @examples
 #' display_palette("sunset")
-#' display_palette("ocean", 10)
+#' display_palette("qicolors", 10)
 display_palette <- function(name, n = NULL) {
   pal <- get_palette(name, n)
   n <- length(pal)

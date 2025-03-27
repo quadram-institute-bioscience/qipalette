@@ -22,6 +22,6 @@ Returns a vector of colors from a specified palette
 }
 \examples{
 get_palette("sunset", 3)
-get_palette("ocean", 10)
+get_palette("qicolors", 10)
 get_palette("forest", 5, reverse = TRUE)
 }
