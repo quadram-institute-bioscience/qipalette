@@ -4,6 +4,8 @@
 
 Color palettes for data visualization from Quadram Institute Bioscience.
 
+![palettes](vignettes/palettes.png)
+
 ## Installation
 
 ```r
