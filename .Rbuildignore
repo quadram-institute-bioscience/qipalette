@@ -1,7 +1,9 @@
 ^CLAUDE.md$
+^\.\.Rcheck$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
+^\.github/workflows/.*$
 ^\.github/.*$
 ^codecov\.yml$
 ^_pkgdown\.yml$
@@ -19,3 +21,5 @@
 ^\.httr-oauth$
 ^\.git/.*$
 ^\.gitignore$
+^doc$
+^Meta$
