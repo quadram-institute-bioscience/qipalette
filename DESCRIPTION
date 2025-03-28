@@ -6,6 +6,10 @@ Authors@R:
            family = "Telatin",
            role = c("aut", "cre"),
            email = "andrea.telatin@quadram.ac.uk")
+    person(given = "Alise",
+           family = "Ponsero",
+           role = c("cre"),
+           email = "alise.ponsero@quadram.ac.uk")
 Description: A collection of color palettes for data visualization in R,
     inspired by the colors of the QIB logo.
 License: MIT + file LICENSE
