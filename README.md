@@ -4,7 +4,7 @@
 
 Color palettes for data visualization from Quadram Institute Bioscience.
 
-![palettes](vignettes/palettes.png)
+![palettes](https://corebio.info/qipalette/articles/introduction_files/figure-html/unnamed-chunk-2-1.png)
 
 ## Installation
 
