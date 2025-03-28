@@ -21,9 +21,10 @@ NULL
 palettes <- list(
   # Define your color palettes here
   qicolors = c("#009681", "#B5BD00", "#333F48", "#CF4520", "#48A23F", "#FF9E1B", "#00778B"),
-  sunset   = c("#FFE4B5", "#FFD700", "#FF8C00", "#FF4500", "#8B0000"),
-  blues    = c("#F0F8FF", "#87CEEB", "#1E90FF", "#0000CD", "#191970"),
-  forest   = c("#ADFF2F", "#32CD32", "#228B22", "#006400", "#2F4F4F")
+  blues    = c("#333F48", "#2B4E52", "#225C5B", "#1A6B65", "#11796E", "#098878", "#009681", "#2BA896", "#55B9AB", "#AADCD5"),
+  forest   = c("#eeeeee", "#b3fff4", "#4dffe6", "#00e6c5", "#009681", "#3CA356", "#79B02B", "#B5BD00"),
+  sunset   = c("#fff1df", "#ffd69f", "#ffbb60", "#ffa020", "#df8000", "#9f5c00", "#603700", "#201200")
+
 )
 
 #' Get a color palette
