@@ -1,15 +1,13 @@
 Package: qipalette
-Title: Quadram Institute Bioscience Color Palettes for Data Visualization
+Title: Quadram Institute Bioscience Color Palettes
 Version: 0.1.0
 Authors@R: 
     person(given = "Andrea",
            family = "Telatin",
            role = c("aut", "cre"),
            email = "andrea.telatin@quadram.ac.uk")
-Description: A collection of color palettes for data visualization in R.
-    This package provides functions to easily access, display, and use these
-    palettes with various plotting systems including base R graphics and ggplot2.
-    The palettes are designed to be visually appealing and accessible.
+Description: A collection of color palettes for data visualization in R,
+    inspired by the colors of the QIB logo.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
