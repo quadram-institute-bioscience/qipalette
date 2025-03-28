@@ -61,13 +61,13 @@ The palettes can be easily used with base R graphics:
 ```{r}
 # Scatter plot with colors by group
 plot(1:5, 1:5, col = get_palette("qicolors", 5), pch = 19, cex = 3,
-     main = "Ocean Palette Demo", xlab = "X", ylab = "Y")
+     main = "qicolors Palette Demo", xlab = "X", ylab = "Y")
 
 # Bar plot
-barplot(1:5, col = get_palette("forest"), main = "Forest Palette Demo")
+barplot(1:5, col = get_palette("blues"), main = "blues Palette Demo")
 
 # Pie chart
-pie(rep(1, 5), col = get_palette("sunset"), main = "Sunset Palette Demo")
+pie(rep(1, 5), col = get_palette("forest"), main = "forest Palette Demo")
 ```
 
 ## Integration with ggplot2
@@ -80,7 +80,7 @@ library(ggplot2)
 # Scatter plot with discrete color scale
 ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
   geom_point(size = 3) +
-  scale_color_palette("sunset") +
+  scale_color_palette("blues") +
   labs(title = "Car Weight vs MPG", color = "Cylinders")
 
 # Bar plot with fill scale
